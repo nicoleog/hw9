@@ -1,0 +1,73 @@
+[
+    
+{
+	"songName" : "Uptown Funk",
+	"artists" : ["Bruno Mars", "Mark Ronson"],
+	"genres" : ["Funk", "Pop"],
+    "year" : 2014
+},
+
+{
+	"songName" : "Domino",
+	"artists" : ["Jessie J"],
+	"genres" : ["Pop"],
+    "year" : 2011
+},
+
+{
+	"songName" : "Lady",
+	"artists" : ["Modjo"],
+	"genres" : ["French House"],
+    "year" : 2000
+},
+
+{
+	"songName" : "Moves Like Jagger",
+	"artists" : ["Maroon 5", "Christina Aguilera"],
+	"genres" : ["Pop"],
+    "year" : 2010
+},
+
+{
+	"songName" : "Isn't She Lovely",
+	"artists" : ["Stevie Wonder"],
+	"genres" : ["R & B", "Soul"],
+    "year" : 1976
+},
+
+{
+	"songName" : "Thinking Out Loud",
+	"artists" : ["Ed Sheeran"],
+	"genres" : ["Dance/Electronic", "Pop"],
+    "year" : 2014
+},
+
+{
+	"songName" : "Shut Up and Dance",
+	"artists" : ["Walk the Moon"],
+	"genres" : ["Alternative", "Pop"],
+    "year" : 2014
+},
+
+{
+	"songName" : "Proud Mary",
+	"artists" : ["Tina Turner"],
+	"genres" : ["R & B", "Pop"],
+    "year" : 2009
+},
+
+{
+	"songName" : "We Found Love",
+	"artists" : ["Rihanna", "Calvin Harris"],
+	"genres" : ["R & B","Dance/Electronic", "Pop"],
+    "year" : 2011
+},
+
+{
+	"songName" : "Just the Way You Are",
+	"artists" : ["Bruno Mars"],
+	"genres" : ["Soft Rock", "Pop"],
+    "year" : 2010
+}
+
+]
