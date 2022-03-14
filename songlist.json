@@ -17,7 +17,7 @@
 {
 	"songName" : "Lady",
 	"artists" : ["Modjo"],
-	"genres" : ["French House"],
+	"genres" : ["Pop"],
     "year" : 2000
 },
 
@@ -66,7 +66,7 @@
 {
 	"songName" : "Just the Way You Are",
 	"artists" : ["Bruno Mars"],
-	"genres" : ["Soft Rock", "Pop"],
+	"genres" : ["Pop"],
     "year" : 2010
 }
 
