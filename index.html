@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Set List</title>
+
+	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   
+    crossorigin="anonymous">
+    </script>
+    <style type="text/css">
+    	body {background-color: rgba(230,169,232,.5)}
+        #part2, #part3, #part4  {margin-left: 20px;}
+        h2 { margin-left: 10px;}
+        form {margin-left: 20px; }
+        form, .button {display: inline-block;}
+    </style>
+	
+
+</head>
+
+<body>
+
+    <h1> Pacific Wedding Band Set List </h1>
+
+    <h2>Part 2</h2>
+    <div id= "part2">&nbsp;</div>
+    
+    <h2>Part 3</h2>
+    <div id= "part3">&nbsp;</div>  
+
+    <h2>Part 4</h2>
+    <form name = 'form1'>   
+        <label for="genres">Choose a genre:</label>
+        <select name="genres" id="genres">
+              <option value="Funk">Funk</option>
+              <option value="Pop">Pop</option>
+              <option value="R & B">R & B</option>
+              <option value="Soul">Soul</option>
+              <option value="Dance/Electronic">Dance/Electronic</option>
+              <option value="Alternative">Alternative</option>
+        </select>
+    </form>  
+    
+        <button id = "button">filter</button>
+    <div id= "part4">&nbsp;</div>
+    <br><br><br><br><br><br>
+      
+</body>
+    <script language="javascript">
+
+
+        $.get( "https://nicoleog.github.io/hw9/songlist.json", 
+            function( data ) {
+                rawStr = JSON.stringify(data);
+                document.getElementById("part2").innerHTML = rawStr +"<br>";
+        
+            display= "";
+            data.forEach(function(song) { 
+                genres = song.genres;
+                genresStr = getArr(genres);
+                artists = song.artists;
+                artistStr = getArr(artists);
+
+            display += 
+                     song.songName + "</br>"
+                    + "Artist(s): " + artistStr + "</br>"
+                    + "Genre(s): " + genresStr + "</br>"
+                    + "Released " + song.year + "</br><br>";
+                }) 
+        
+            document.getElementById("part3").innerHTML = display +"<br/>";
+
+            button = document.getElementById("button");
+        
+            button.onclick = function() {
+                 currGenre = document.form1.genres.value;
+                 
+                 allSongs = "<br>" + currGenre + " songs: ";
+                 
+                 data.forEach(function(song) { 
+                     for (i = 0; i < song.genres.length; i++ ) {
+                         if (song.genres[i] == currGenre) {
+                             allSongs += "<br>" + song.songName;
+                         }
+                     } 
+                 }) 
+                 
+                 document.getElementById("part4").innerHTML = allSongs;
+            }
+        
+        function getArr(arr) {
+            arrStr = ""
+            for (i = 0; i < arr.length - 1; i++ ) {
+                arrStr += arr[i] + ", "
+            }
+            arrStr += arr[arr.length - 1];
+            return arrStr;
+        }
+
+        })
+    </script>
+</html>
